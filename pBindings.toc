@@ -1,0 +1,9 @@
+## Interface: 30300
+## Author: p3lim
+## Version: Alpha
+## Title: pBindings
+## Notes: Personal bindings for oBindings by haste
+## RequiredDeps: oBindings
+
+druid.lua
+shaman.lua
