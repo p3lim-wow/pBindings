@@ -34,25 +34,3 @@ oBindings:RegisterKeyBindings('Restoration', shared, {
 	BUTTON5 = 's|Heroism',
 	BUTTON4 = 'm|/cast Nature\'s Swiftness\n/cast Tidal Force'
 })
-
-oBindings:RegisterKeyBindings('Elemental', shared, {
-	's|Flame Shock',
-	's|Lava Burst',
-	's|Lightning Bolt',
-	's|Chain Lightning',
-
-	shift = {
-		's|Searing Totem',
-		's|Magma Totem',
-		's|Fire Nova',
-		's|Thunderstorm',
-
-		X = 's|Fire Elemental Totem',
-	},
-
-	NUMPAD5 = 's|Flametongue Weapon',
-
-	BUTTON3 = 's|Water Shield',
-	BUTTON5 = 's|Heroism',
-	BUTTON4 = 's|Elemental Mastery'
-})
