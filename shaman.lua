@@ -8,6 +8,8 @@ oBindings:RegisterKeyBindings('Restoration', {
 	's|Lesser Healing Wave',
 	's|Healing Wave',
 
+	Q = 'i|8',
+
 	shift = {
 		's|Gift of the Naaru',
 		's|Earth Shield',
