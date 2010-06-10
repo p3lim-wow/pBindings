@@ -57,7 +57,7 @@ oBindings:RegisterKeyBindings('Feral Combat', {
 		'm|/cast [swimming] Aquatic Form; [flyable] Swift Flight Form',
 		's|Travel Form',
 
-		BUTTON3 = 'm|/dimount\n/leavevehicle\n/cast Celestial Steed'
+		BUTTON3 = 'm|/dimount\n/leavevehicle\n/cast Celestial Steed',
 
 		NUMPAD5 = 's|Thorns'
 	}
