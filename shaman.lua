@@ -1,7 +1,5 @@
 if(select(2, UnitClass('player')) ~= 'SHAMAN') then return end
 
-
-
 oBindings:RegisterKeyBindings('Restoration', {
 	's|Riptide',
 	's|Chain Heal',
