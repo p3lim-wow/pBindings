@@ -24,7 +24,7 @@ oBindings:RegisterKeyBindings('Restoration', {
 		BUTTON3 = 'm|/dimount\n/leavevehicle\n/cast Celestial Steed'
 	},
 
-	NUMPAD1 = 's|Mana Tide Totem',
+	NUMPAD1 = 's|Mana Spring Totem',
 	NUMPAD2 = 's|Cleansing Totem',
 	NUMPAD3 = 's|Tremor Totem',
 	NUMPAD5 = 's|Earthliving Weapon',
