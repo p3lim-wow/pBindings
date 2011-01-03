@@ -9,8 +9,8 @@ pBindings:RegisterKeyBindings('Feral Combat', bindings.base, {
 	F = 's|Rebirth',
 
 	BUTTON3 = 's|Darkflight',
-	BUTTON4 = 's|/focus\n/cast Entangling Roots',
-	BUTTON5 = 's|/focus\n/cast Hibernate',
+	BUTTON4 = 'm|/focus\n/cast Entangling Roots',
+	BUTTON5 = 'm|/focus\n/cast Hibernate',
 
 	cat = {
 		'm|/cast [stealth] Pounce; Rake',
@@ -56,9 +56,9 @@ pBindings:RegisterKeyBindings('Feral Combat', bindings.base, {
 		'm|/cast [swimming] Aquatic Form; [flyable] Swift Flight Form',
 		's|Travel Form',
 
-		F = 'm|/dismount\n/cast Survey',
+		F = 's|Survey',
 		
-		BUTTON3 = 'm|/dismount\n/leavevehicle\/cast [flyable] Time-Lost Proto-Drake; Running Wild',
+		BUTTON3 = 'm|/dismount\n/leavevehicle\n/cast [flyable] Time-Lost Proto-Drake; Running Wild',
 		BUTTON4 = 's|Thorns',
 	},
 })
