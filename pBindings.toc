@@ -3,6 +3,7 @@
 ## Version: Alpha
 ## Title: pBindings
 ## Notes: Personal bindings for oBindings by haste
-## RequiredDeps: oBindings
+
+oBindings\bindings.lua
 
 druid.lua
