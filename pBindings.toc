@@ -1,4 +1,4 @@
-## Interface: 30300
+## Interface: 40000
 ## Author: p3lim
 ## Version: Alpha
 ## Title: pBindings
@@ -6,4 +6,3 @@
 ## RequiredDeps: oBindings
 
 druid.lua
-shaman.lua
