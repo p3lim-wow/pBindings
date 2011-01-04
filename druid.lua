@@ -28,7 +28,7 @@ pBindings:RegisterKeyBindings('Feral Combat', bindings.base, {
 	bear = {
 		's|Lacerate',
 		's|Maul',
-		'm|/castsequence reset=combat Trash(Bear Form), Swipe(Bear Form)',
+		'm|/castsequence reset=combat Thrash(Bear Form), Swipe(Bear Form)',
 		's|Mangle(Bear Form)',
 
 		F = 's|Challenging Roar',
@@ -40,7 +40,7 @@ pBindings:RegisterKeyBindings('Feral Combat', bindings.base, {
 
 	shift = {
 		'm|/cast [form:1] Frenzied Regrowth; [form:3] Tiger\'s Fury; Revive',
-		'm|/cast [form:2] Demoralizing Roar; [form:3] Dash; Mark of the Wild',
+		'm|/cast [form:1] Demoralizing Roar; [form:3] Dash; Mark of the Wild',
 		'm|/cast [form:1/3] Berserk; Innervate',
 
 		F = 'm|/cast [form:1] Feral Charge(Bear Form); [form:3] Feral Charge(Cat Form)',
