@@ -2,8 +2,8 @@ local _, bindings = ...
 
 pBindings:RegisterKeyBindings('Feral Combat', bindings.base, {
 	's|Lifebloom',
-	'm|/cast [worn:Fishing Pole,nochanneling] Fishing; Regrowth',
-	's|Healing Tough',
+	'm|/cast [worn:Fishing Pole,nochanneling] Fishing; [nochanneling] Regrowth',
+	's|Healing Touch',
 	's|Tranquility',
 
 	F = 's|Rebirth',
@@ -39,7 +39,7 @@ pBindings:RegisterKeyBindings('Feral Combat', bindings.base, {
 	},
 
 	shift = {
-		'm|/cast [form:1] Frenzied Regrowth; [form:3] Tiger\'s Fury; Revive',
+		'm|/cast [form:1] Frenzied Regeneration; [form:3] Tiger\'s Fury; Revive',
 		'm|/cast [form:1] Demoralizing Roar; [form:3] Dash; Mark of the Wild',
 		'm|/cast [form:1/3] Berserk; Innervate',
 
