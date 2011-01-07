@@ -39,13 +39,13 @@ pBindings:RegisterKeyBindings('Feral Combat', bindings.base, {
 	},
 
 	shift = {
-		'm|/cast [form:1] Frenzied Regeneration; [form:3] Tiger\'s Fury; Revive',
+		'm|/cast [form:1] Pulverize; [form:3] Tiger\'s Fury; Revive',
 		'm|/cast [form:1] Demoralizing Roar; [form:3] Dash; Mark of the Wild',
 		'm|/cast [form:1/3] Berserk; Innervate',
 
 		F = 'm|/cast [form:1] Feral Charge(Bear Form); [form:3] Feral Charge(Cat Form)',
 
-		BUTTON3 = 'm|/cast Barkskin\n/cast [form:1/3] Survival Instincts(Cat or Bear Form)',
+		BUTTON3 = 'm|/cast Barkskin\n/cast [form:1] Frenzied Regeneration\n/cast [form:1/3] Survival Instincts(Cat or Bear Form)',
 		BUTTON4 = 'm|/cast [form:1/3] Faerie Fire (Feral)(Feral); Faerie Fire',
 		BUTTON5 = 'm|/cast [form:1] Skull Bash(Bear Form); [form:3] Skull Bash(Cat Form); Cyclone',
 	},
