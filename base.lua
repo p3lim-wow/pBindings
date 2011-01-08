@@ -56,8 +56,22 @@ local function UpdateButton(button)
 	end
 end
 
+function pBindings:ACTIONBAR_UPDATE_COOLDOWN()
+	if(not oBindings1:IsShown()) then return end
+
+	for index = 1, 9 do
+		local button = _G['oBindings' .. index]
+		if(GetActionInfo(button.action)) then
+			local _, spell = GetActionInfo(button.action)
+			local start, duration = GetSpellCooldown(spell)
+			button.cooldown:SetCooldown(start, duration)
+		end
+	end
+end
+
 pBindings:HookScript('OnEvent', function(self, event, addon)
 	if(event ~= 'ADDON_LOADED' or addon ~= addonName) then return end
+	self:RegisterEvent('ACTIONBAR_UPDATE_COOLDOWN')
 
 	local _STATE = oBindings1:GetParent()
 	RegisterStateDriver(_STATE, 'visibility', '[bonusbar:5] show; hide')
@@ -92,6 +106,10 @@ pBindings:HookScript('OnEvent', function(self, event, addon)
 		icon:SetAllPoints()
 		icon:SetTexCoord(0.08, 0.92, 0.08, 0.92)
 		button.icon = icon
+
+		local cooldown = CreateFrame('Cooldown', nil, button)
+		cooldown:SetAllPoints()
+		button.cooldown = cooldown
 
 		if(index == 1) then
 			button:SetPoint('BOTTOM', UIParent, -133, 100)
