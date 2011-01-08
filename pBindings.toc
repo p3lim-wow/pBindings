@@ -8,3 +8,4 @@ oBindings\bindings.lua
 
 base.lua
 druid.lua
+possessbar.lua
