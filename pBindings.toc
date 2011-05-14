@@ -5,6 +5,7 @@
 ## Notes: Personal bindings for oBindings by haste
 
 oBindings\bindings.lua
+oBindings\blizzard.lua
 
 base.lua
 druid.lua
