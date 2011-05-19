@@ -2,7 +2,7 @@ local _, bindings = ...
 
 pBindings:RegisterKeyBindings('Feral Combat', bindings.base, {
 	's|Lifebloom',
-	'm|/cast [worn:Fishing Pole,nochanneling] Fishing; [nochanneling] Regrowth',
+	'm|/cast [worn:Fishing Pole] Fishing; [nochanneling] Regrowth',
 	's|Healing Touch',
 	's|Tranquility',
 
