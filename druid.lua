@@ -58,7 +58,7 @@ pBindings:RegisterKeyBindings('Feral Combat', bindings.base, {
 
 		F = 's|Survey',
 		
-		BUTTON3 = 'm|/dismount\n/leavevehicle\n/cast [flyable] Time-Lost Proto-Drake; Running Wild',
+		BUTTON3 = 'm|/dismount\n/leavevehicle\n/cast [flyable] Time-Lost Proto-Drake; Winterspring Frostsaber',
 		BUTTON4 = 's|Thorns',
 	},
 })
