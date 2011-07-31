@@ -3,12 +3,11 @@ local _, bindings = ...
 pBindings:RegisterKeyBindings('Feral Combat', bindings.base, {
 	's|Lifebloom',
 	'm|/cast [worn:Fishing Pole] Fishing; [nochanneling] Regrowth',
-	's|Healing Touch',
-	's|Tranquility',
+	's|Rejuvenation',
+	's|Nourish',
 
 	F = 's|Rebirth',
 
-	BUTTON3 = 's|Darkflight',
 	BUTTON4 = 'm|/focus\n/cast Entangling Roots',
 	BUTTON5 = 'm|/focus\n/cast Hibernate',
 
@@ -28,7 +27,7 @@ pBindings:RegisterKeyBindings('Feral Combat', bindings.base, {
 	bear = {
 		's|Lacerate',
 		's|Maul',
-		'm|/castsequence reset=combat Thrash(Bear Form), Swipe(Bear Form)',
+		'm|/castsequence reset=combat Swipe(Bear Form), Thrash(Bear Form)',
 		's|Mangle(Bear Form)',
 
 		F = 's|Challenging Roar',
@@ -42,6 +41,8 @@ pBindings:RegisterKeyBindings('Feral Combat', bindings.base, {
 		'm|/cast [form:1] Pulverize; [form:3] Tiger\'s Fury; Revive',
 		'm|/cast [form:1] Demoralizing Roar; [form:3] Dash; Mark of the Wild',
 		'm|/cast [form:1/3] Berserk; Innervate',
+		's|Tranquility',
+		's|Shadowmeld',
 
 		F = 'm|/cast [form:1] Feral Charge(Bear Form); [form:3] Feral Charge(Cat Form)\n/cast [form:3] Ravage!',
 
@@ -58,7 +59,6 @@ pBindings:RegisterKeyBindings('Feral Combat', bindings.base, {
 
 		F = 's|Survey',
 		
-		BUTTON3 = 'm|/dismount\n/leavevehicle\n/cast [flyable]  Bloodbathed Frostbrood Vanquisher; Winterspring Frostsaber',
-		BUTTON4 = 's|Thorns',
+		BUTTON3 = 'm|/dismount\n/leavevehicle\n/cast [flyable] Bloodbathed Frostbrood Vanquisher; Amani Battle Bear',
 	},
 })
