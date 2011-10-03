@@ -16,6 +16,7 @@ pBindings:RegisterKeyBindings('Feral Combat', bindings.base, {
 		'm|/cast [stealth] Ravage; Shred',
 		's|Swipe(Cat Form)',
 		's|Mangle(Cat Form)',
+		's|Maim(Cat Form)',
 
 		Q = 'm|/cast Tiger\'s Fury\n/cast Berserk',
 		E = 's|Tiger\'s Fury',
