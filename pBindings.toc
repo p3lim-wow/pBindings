@@ -9,4 +9,5 @@ oBindings\blizzard.lua
 
 base.lua
 druid.lua
+hunter.lua
 possessbar.lua
