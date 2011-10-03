@@ -17,6 +17,9 @@ pBindings:RegisterKeyBindings('Feral Combat', bindings.base, {
 		's|Swipe(Cat Form)',
 		's|Mangle(Cat Form)',
 
+		Q = 'm|/cast Tiger\'s Fury\n/cast Berserk',
+		E = 's|Tiger\'s Fury',
+
 		F = 's|Savage Roar',
 
 		BUTTON3 = 's|Prowl',
@@ -30,6 +33,9 @@ pBindings:RegisterKeyBindings('Feral Combat', bindings.base, {
 		'm|/castsequence reset=combat Swipe(Bear Form), Thrash(Bear Form)',
 		's|Mangle(Bear Form)',
 
+		Q = 's|Berserk',
+		E = 's|Pulverize',
+
 		F = 's|Challenging Roar',
 
 		BUTTON3 = 's|Enrage',
@@ -38,15 +44,16 @@ pBindings:RegisterKeyBindings('Feral Combat', bindings.base, {
 	},
 
 	shift = {
-		'm|/cast [form:1] Pulverize; [form:3] Tiger\'s Fury; Revive',
+		'm|/cast Innervate',
 		'm|/cast [form:1] Demoralizing Roar; [form:3] Dash; Mark of the Wild',
-		'm|/cast [form:1/3] Berserk; Innervate',
 		's|Tranquility',
 		's|Shadowmeld',
 
+		Q = 'm|/cast Barkskin\n/cast [form:1/3] Survival Instincts(Cat or Bear Form)',
+		E = 'm|/cast [form:1] Frenzied Regeneration',
+
 		F = 'm|/cast [form:1] Feral Charge(Bear Form); [form:3] Feral Charge(Cat Form)\n/cast [form:3] Ravage!',
 
-		BUTTON3 = 'm|/cast Barkskin\n/cast [form:1] Frenzied Regeneration\n/cast [form:1/3] Survival Instincts(Cat or Bear Form)',
 		BUTTON4 = 'm|/cast [form:1/3] Faerie Fire (Feral)(Feral); Faerie Fire',
 		BUTTON5 = 'm|/cast [form:1] Skull Bash(Bear Form); [form:3] Skull Bash(Cat Form); Cyclone',
 	},
