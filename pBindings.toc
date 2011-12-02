@@ -3,6 +3,7 @@
 ## Version: Alpha
 ## Title: pBindings
 ## Notes: Personal bindings for oBindings by haste
+## SavedVariables: ExtraBarPosition
 
 oBindings\bindings.lua
 oBindings\blizzard.lua
@@ -11,3 +12,4 @@ base.lua
 druid.lua
 hunter.lua
 possessbar.lua
+extrabar.lua
