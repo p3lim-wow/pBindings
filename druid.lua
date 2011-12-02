@@ -6,8 +6,6 @@ pBindings:RegisterKeyBindings('Feral Combat', bindings.base, {
 	's|Rejuvenation',
 	's|Nourish',
 
-	F = 's|Rebirth',
-
 	BUTTON4 = 'm|/focus\n/cast Entangling Roots',
 	BUTTON5 = 'm|/focus\n/cast Hibernate',
 
@@ -22,6 +20,7 @@ pBindings:RegisterKeyBindings('Feral Combat', bindings.base, {
 		E = 's|Tiger\'s Fury',
 
 		F = 's|Savage Roar',
+		T = 'm|/cast Feral Charge(Cat Form)\n/cast [form:3] Ravage!',
 
 		BUTTON3 = 's|Prowl',
 		BUTTON4 = 's|Rip',
@@ -38,6 +37,7 @@ pBindings:RegisterKeyBindings('Feral Combat', bindings.base, {
 		E = 's|Pulverize',
 
 		F = 's|Challenging Roar',
+		T = 's|Feral Charge(Bear Form)',
 
 		BUTTON3 = 's|Enrage',
 		BUTTON4 = 's|Growl',
@@ -53,7 +53,7 @@ pBindings:RegisterKeyBindings('Feral Combat', bindings.base, {
 		Q = 'm|/cast Barkskin\n/cast [form:1/3] Survival Instincts(Cat or Bear Form)',
 		E = 'm|/cast [form:1] Frenzied Regeneration',
 
-		F = 'm|/cast [form:1] Feral Charge(Bear Form); [form:3] Feral Charge(Cat Form)\n/cast [form:3] Ravage!',
+		F = 's|Rebirth',
 
 		BUTTON4 = 'm|/cast [form:1/3] Faerie Fire (Feral)(Feral); Faerie Fire',
 		BUTTON5 = 'm|/cast [form:1] Skull Bash(Bear Form); [form:3] Skull Bash(Cat Form); Cyclone',
@@ -67,6 +67,6 @@ pBindings:RegisterKeyBindings('Feral Combat', bindings.base, {
 
 		F = 's|Survey',
 		
-		BUTTON3 = 'm|/dismount\n/leavevehicle\n/cast [flyable] Bloodbathed Frostbrood Vanquisher; Amani Battle Bear',
+		BUTTON3 = 'm|/dismount\n/leavevehicle\n/cast [flyable] Corrupted Fire Hawk; Mekgineer\'s Chopper',
 	},
 })
