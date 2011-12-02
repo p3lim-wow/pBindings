@@ -5,6 +5,7 @@ pBindings:RegisterKeyBindings('Marksmanship', bindings.base, {
 	's|Steady Shot',
 	's|Aimed Shot',
 	's|Serpent Sting',
+	's|Raptor Strike',
 
 	Q = 'm|/cast Rapid Fire\n/cast Readiness\n/cast Lifebloom',
 	E = 's|Arcane Shot',
@@ -18,6 +19,7 @@ pBindings:RegisterKeyBindings('Marksmanship', bindings.base, {
 		's|Trap Launcher',
 		's|Feign Death',
 		's|Shadowmeld',
+		'm|/cast [@player] Master\'s Call',
 
 		Q = 's|Multi-Shot',
 		E = 's|Kill Shot',
@@ -32,6 +34,6 @@ pBindings:RegisterKeyBindings('Marksmanship', bindings.base, {
 	},
 
 	ctrl = {
-		BUTTON3 = 'm|/dismount\n/leavevehicle\n/cast Snowy Gryphon',
+		BUTTON3 = 'm|/dismount\n/leavevehicle\n/cast Tyrael\'s Charger',
 	},
 })
