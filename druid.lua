@@ -49,6 +49,7 @@ pBindings:RegisterKeyBindings('Feral Combat', bindings.base, {
 		'm|/cast [form:1] Demoralizing Roar; [form:3] Dash; Mark of the Wild',
 		's|Tranquility',
 		's|Shadowmeld',
+		'm|/cast [form:3] Stampeding Roar(Cat Form); [form:1] Stampeding Roar(Bear Form)',
 
 		Q = 'm|/cast Barkskin\n/cast [form:1/3] Survival Instincts(Cat or Bear Form)',
 		E = 'm|/cast [form:1] Frenzied Regeneration',
