@@ -44,9 +44,19 @@ function pBindings:ACTIONBAR_UPDATE_COOLDOWN()
 	end
 end
 
+function pBindings:UPDATE_BINDINGS()
+	for index = 1, 9 do
+		local key = GetBindingKey('CLICK oBindings' .. index .. ':LeftButton')
+		if(key) then
+			_G['oBindings' .. index].hotkey:SetText(GetBindingText(key, 'KEY_', 1))
+		end
+	end
+end
+
 pBindings:HookScript('OnEvent', function(self, event, addon)
 	if(event ~= 'ADDON_LOADED' or addon ~= ADDON) then return end
 	self:RegisterEvent('ACTIONBAR_UPDATE_COOLDOWN')
+	self:RegisterEvent('UPDATE_BINDINGS')
 
 	local _STATE = oBindings1:GetParent()
 	RegisterStateDriver(_STATE, 'visibility', '[bonusbar:5] show; hide')
@@ -91,6 +101,10 @@ pBindings:HookScript('OnEvent', function(self, event, addon)
 		else
 			button:SetPoint('LEFT', _G['oBindings' .. index - 1], 'RIGHT', 4, 0)
 		end
+
+		local hotkey = button:CreateFontString(nil, 'ARTWORK', 'NumberFontNormalSmallGray')
+		hotkey:SetPoint('BOTTOMRIGHT')
+		button.hotkey = hotkey
 
 		button.action = string.match(button:GetAttribute('ob-possess-attribute'), 'action,(%d+)')
 	end
