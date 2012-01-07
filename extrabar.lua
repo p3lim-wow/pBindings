@@ -1,74 +1,34 @@
-
 local addon = CreateFrame('Frame')
 addon:RegisterEvent('PLAYER_LOGIN')
-addon:RegisterEvent('UPDATE_EXTRA_ACTIONBAR')
-addon:SetScript('OnEvent', function(self, event) self[event](ExtraActionButton1, event) end)
+addon:SetScript('OnEvent', function()
+	local frame = ExtraActionBarFrame
+	frame:SetParent(UIParent)
+	frame:SetScale(0.9)
+	frame:SetMovable(true)
+	frame:SetClampedToScreen(true)
+	frame:EnableMouse(true)
+	frame.ignoreFramePositionManager = true
 
-local Show, Hide
-
-function addon:PLAYER_LOGIN()
-	if(UIPARENT_MANAGED_FRAME_POSITIONS.ExtraActionBarFrame) then
-		UIPARENT_MANAGED_FRAME_POSITIONS.ExtraActionBarFrame = nil
-	end
-
-	-- the button seems to randomly disappear,
-	-- so we hook the functions and control them ourselves.
-	-- this will however require a reload to remove.
-	Show = self.Show
-	Hide = self.Hide
-	self.Show = function() end
-	self.Hide = function() end
-
-	self:SetParent(UIParent)
-	self:SetScale(0.9)
-	self:SetMovable(true)
-	self:EnableMouse(true)
-	self:SetClampedToScreen(true)
-	self:RegisterForDrag('LeftButton')
-
-	self:ClearAllPoints()
+	frame:ClearAllPoints()
 	if(ExtraBarPosition) then
 		local point, x, y = string.split('\031', ExtraBarPosition)
-		self:SetPoint(point, UIParent, point, x, y)
+		frame:SetPoint(point, UIParent, point, x, y)
 	else
-		ExtraBarPosition = 'LEFT\03140\0310'
-		self:SetPoint('LEFT', UIParent, 40, 0)
+		frame:SetPoint('LEFT', 40, 0)
 	end
 
-	
-	self:SetScript('OnDragStart', function(self)
+	local button = ExtraActionButton1
+	button:RegisterForDrag('LeftButton')
+	button:SetScript('OnDragStart', function()
 		if(IsAltKeyDown()) then
-			self:StartMoving()
+			frame:StartMoving()
 		end
 	end)
 
-	self:SetScript('OnDragStop', function(self)
-		self:StopMovingOrSizing()
+	button:SetScript('OnDragStop', function()
+		frame:StopMovingOrSizing()
 
-		local point, _, _, x, y = self:GetPoint()
+		local point, _, _, x, y = frame:GetPoint()
 		ExtraBarPosition = string.format('%s\031%d\031%d', point, x, y)
-
-		if(not InCombatLockdown()) then
-			self:ClearAllPoints()
-			self:SetPoint(point, UIParent, point, x, y)
-		else
-			addon:RegisterEvent('PLAYER_REGEN_ENABLED')
-		end
 	end)
-end
-
-function addon:UPDATE_EXTRA_ACTIONBAR()
-	if(HasExtraActionBar()) then
-		Show(self)
-	else
-		Hide(self)
-	end
-end
-
-function addon:PLAYER_REGEN_ENABLED(event)
-	addon:UnregisterEvent(event)
-
-	local point, x, y = string.split('\031', ExtraBarPosition)
-	self:ClearAllPoints()
-	self:SetPoint(point, UIParent, point, x, y)
-end
+end)
