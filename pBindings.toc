@@ -8,8 +8,9 @@
 oBindings\bindings.lua
 oBindings\blizzard.lua
 
-base.lua
-druid.lua
-hunter.lua
+bindings\base.lua
+bindings\druid.lua
+bindings\hunter.lua
+
 possessbar.lua
 extrabar.lua
