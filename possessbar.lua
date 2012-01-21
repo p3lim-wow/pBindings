@@ -1,33 +1,34 @@
 local ADDON = ...
+
 local TEXTURE = [=[Interface\ChatFrame\ChatFrameBackground]=]
 local BACKDROP = {
 	bgFile = TEXTURE, insets = {top = -1, bottom = -1, left = -1, right = -1}
 }
 
-local function UpdateRange(button, elapsed)
-	if((button.rangeTimer or 1) > 0.2) then
-		if(IsActionInRange(button.action) == 0) then
-			button.icon:SetVertexColor(1, 0, 0)
+local function UpdateRange(self, elapsed)
+	if((self.rangeTimer or 1) > 0.2) then
+		if(IsActionInRange(self.action) == 0) then
+			self.icon:SetVertexColor(1, 0, 0)
 		else
-			button.icon:SetVertexColor(1, 1, 1)
+			self.icon:SetVertexColor(1, 1, 1)
 		end
 
-		button.rangeTimer = 0
+		self.rangeTimer = 0
 	else
-		button.rangeTimer = button.rangeTimer + elapsed
+		self.rangeTimer = self.rangeTimer + elapsed
 	end
 end
 
-local function UpdateButton(button)
-	local texture = GetActionTexture(button.action)
+local function UpdateButton(self)
+	local texture = GetActionTexture(self.action)
 	if(texture) then
-		button.icon:SetTexture(texture)
+		self.icon:SetTexture(texture)
 
-		button:SetAlpha(1)
-		button:EnableMouse(true)
+		self:SetAlpha(1)
+		self:EnableMouse(1)
 	else
-		button:SetAlpha(0)
-		button:EnableMouse(false)
+		self:SetAlpha(0)
+		self:EnableMouse(0)
 	end
 end
 
