@@ -30,6 +30,7 @@ pBindings:RegisterKeyBindings('Combat', bindings.base, {
 		's|Sprint',
 		's|Cloak of Shadows',
 		's|Shadowmeld',
+		's|Blind',
 
 		Q = 'm|/cast Combat Readiness\n/cast Evasion',
 		E = 's|Blade Flurry',
@@ -37,9 +38,10 @@ pBindings:RegisterKeyBindings('Combat', bindings.base, {
 		F = 'm|/focus [help]\n/stopmacro [help]\n/cast [@focus,help] Tricks of the Trade',
 
 		BUTTON4 = 's|Kick',
+		BUTTON5 = 's|Kidney Shot',
 	},
 
 	ctrl = {
-		BUTTON3 = 'm|/dismount\n/leavevehicle\n/cast Tyrael\'s Charger',
+		BUTTON3 = 'm|/dismount\n/leavevehicle\n/cast [flyable] Tyrael\'s Charger; Swift Mistsaber',
 	},
 })
