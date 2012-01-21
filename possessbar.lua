@@ -1,5 +1,6 @@
 local ADDON = ...
 
+local FONT = [=[Interface\AddOns\pBindings\semplice.ttf]=]
 local TEXTURE = [=[Interface\ChatFrame\ChatFrameBackground]=]
 local BACKDROP = {
 	bgFile = TEXTURE, insets = {top = -1, bottom = -1, left = -1, right = -1}
@@ -110,8 +111,9 @@ pBindings:HookScript('OnEvent', function(self, event, addon)
 			button:SetPoint('LEFT', _G['oBindings' .. index - 1], 'RIGHT', 4, 0)
 		end
 
-		local hotkey = button:CreateFontString(nil, 'ARTWORK', 'NumberFontNormalSmallGray')
+		local hotkey = button:CreateFontString(nil, 'ARTWORK')
 		hotkey:SetPoint('BOTTOMRIGHT')
+		hotkey:SetFont(FONT, 8, 'OUTLINEMONOCHROME')
 		button.hotkey = hotkey
 
 		button.action = string.match(button:GetAttribute('ob-possess-attribute'), 'action,(%d+)')
