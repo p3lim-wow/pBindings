@@ -23,13 +23,22 @@ local function UpdateButton(self)
 	local texture = GetActionTexture(self.action)
 	if(texture) then
 		self.icon:SetTexture(texture)
-
 		self:SetAlpha(1)
-		self:EnableMouse(1)
 	else
 		self:SetAlpha(0)
-		self:EnableMouse(0)
 	end
+end
+
+local function OnEnter(self)
+	if(self:GetAlpha() == 1) then
+		self:SetBackdropColor(0, 4/6, 1)
+		ActionButton_SetTooltip(self)
+	end
+end
+
+local function OnLeave(self)
+	self:SetBackdropColor(0, 0, 0)
+	GameTooltip:Hide()
 end
 
 function pBindings:ACTIONBAR_UPDATE_COOLDOWN()
@@ -79,10 +88,8 @@ pBindings:HookScript('OnEvent', function(self, event, addon)
 		button:SetBackdrop(BACKDROP)
 		button:SetBackdropColor(0, 0, 0)
 
-		button:SetScript('OnLeave', GameTooltip_Hide)
-		button:SetScript('OnEnter', ActionButton_SetTooltip)
-		button:HookScript('OnEnter', function() button:SetBackdropColor(0, 4/6, 1) end)
-		button:HookScript('OnLeave', function() button:SetBackdropColor(0, 0, 0) end)
+		button:SetScript('OnEnter', OnEnter)
+		button:SetScript('OnLeave', OnLeave)
 		button:HookScript('OnUpdate', UpdateRange)
 
 		button:SetPushedTexture(TEXTURE)
