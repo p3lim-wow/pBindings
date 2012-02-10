@@ -1,6 +1,12 @@
 local _, bindings = ...
 
 bindings.base = {
+	[5] = 's|placeholder',
+	[6] = 's|placeholder',
+	[7] = 's|placeholder',
+	[8] = 's|placeholder',
+	[9] = 's|placeholder',
+
 	W = 'MOVEFORWARD',
 	A = 'STRAFELEFT',
 	S = 'MOVEBACKWARD',
