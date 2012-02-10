@@ -19,7 +19,7 @@ pBindings:RegisterKeyBindings('Feral Combat', bindings.base, {
 		's|Maim(Cat Form)',
 
 		Q = 'm|/cast Tiger\'s Fury\n/cast Berserk',
-		E = 's|Tiger\'s Fury',
+		E = 'm|/cast Tiger\'s Fury\n/cast [form:3] Ravage!',
 
 		F = 's|Savage Roar',
 		T = 'm|/cast Feral Charge(Cat Form)\n/cast [form:3] Ravage!',
