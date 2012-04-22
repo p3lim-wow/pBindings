@@ -1,4 +1,4 @@
-local ADDON = ...
+local globalName = ...
 
 local FONT = [=[Interface\AddOns\pBindings\semplice.ttf]=]
 local TEXTURE = [=[Interface\ChatFrame\ChatFrameBackground]=]
@@ -47,9 +47,9 @@ function pBindings:ACTIONBAR_UPDATE_COOLDOWN()
 
 	for index = 1, 9 do
 		local button = _G['oBindings' .. index]
-		if(GetActionInfo(button.action)) then
-			local _, spell = GetActionInfo(button.action)
-			local start, duration = GetSpellCooldown(spell)
+		local _, id = GetActionInfo(button.action)
+		if(id) then
+			local start, duration = GetSpellCooldown(id)
 			button.cooldown:SetCooldown(start, duration)
 		end
 	end
@@ -64,8 +64,9 @@ function pBindings:UPDATE_BINDINGS()
 	end
 end
 
-pBindings:HookScript('OnEvent', function(self, event, addon)
-	if(event ~= 'ADDON_LOADED' or addon ~= ADDON) then return end
+pBindings:HookScript('OnEvent', function(self, event, name)
+	if(event ~= 'ADDON_LOADED' or name ~= globalName) then return end
+
 	self:RegisterEvent('ACTIONBAR_UPDATE_COOLDOWN')
 	self:RegisterEvent('UPDATE_BINDINGS')
 
