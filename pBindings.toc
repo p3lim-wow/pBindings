@@ -10,9 +10,6 @@ oBindings\blizzard.lua
 
 bindings\base.lua
 bindings\druid.lua
-bindings\hunter.lua
-bindings\rogue.lua
-bindings\shaman.lua
 
 possessbar.lua
 extrabar.lua
