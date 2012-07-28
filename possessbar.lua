@@ -7,6 +7,8 @@ local BACKDROP = {
 }
 
 local function UpdateRange(self, elapsed)
+	if(not self.action) then return end
+
 	if((self.rangeTimer or 1) > 0.2) then
 		if(IsActionInRange(self.action) == 0) then
 			self.icon:SetVertexColor(1, 0, 0)
@@ -21,6 +23,8 @@ local function UpdateRange(self, elapsed)
 end
 
 local function UpdateButton(self)
+	if(not self.action) then return end
+
 	local texture = GetActionTexture(self.action)
 	if(texture) then
 		self.icon:SetTexture(texture)
@@ -47,6 +51,7 @@ function pBindings:ACTIONBAR_UPDATE_COOLDOWN()
 
 	for index = 1, 6 do
 		local button = _G['oBindings' .. index]
+		if(not button.action) then return end
 
 		local _, id = GetActionInfo(button.action)
 		if(id) then
