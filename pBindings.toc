@@ -10,4 +10,4 @@ oBindings\blizzard.lua
 bindings\base.lua
 bindings\druid.lua
 
-possessbar.lua
+possess.lua
