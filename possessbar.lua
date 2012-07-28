@@ -65,6 +65,18 @@ function pBindings:UPDATE_BINDINGS()
 	end
 end
 
+local lastState
+pBindings:RegisterCallback(function(self, state)
+	if(state ~= lastState and state ~= 'base' and state ~= 'shift' and state ~= 'ctrl' and state ~= 'alt' and state ~= 'petbattle') then
+		lastState = state
+
+		for index = 1, 6 do
+			local button = _G['oBindings' .. index]
+			button.action = string.match(button:GetAttribute('ob-' .. state .. '-attribute'), 'action,(%d+)')
+		end
+	end
+end)
+
 pBindings:HookScript('OnEvent', function(self, event, name)
 	if(event ~= 'ADDON_LOADED' or name ~= globalName) then return end
 
@@ -117,7 +129,5 @@ pBindings:HookScript('OnEvent', function(self, event, name)
 		hotkey:SetPoint('BOTTOMRIGHT')
 		hotkey:SetFont(FONT, 8, 'OUTLINEMONOCHROME')
 		button.hotkey = hotkey
-
-		button.action = string.match(button:GetAttribute('ob-possess-attribute'), 'action,(%d+)')
 	end
 end)
