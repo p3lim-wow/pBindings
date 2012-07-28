@@ -81,14 +81,11 @@ pBindings:HookScript('OnEvent', function(self, event, name)
 	local _STATE = oBindings1:GetParent()
 	RegisterStateDriver(_STATE, 'visibility', '[vehicleui][possessbar][overridebar] show; hide')
 
-	local lastValue
 	_STATE:HookScript('OnAttributeChanged', function(self, attribute, value)
-		if(attribute == 'statehidden' and value ~= lastValue) then
+		if(attribute == 'statehidden' and not value) then
 			for index = 1, 6 do
 				UpdateButton(_G['oBindings' .. index])
 			end
-
-			lastValue = value
 		end
 	end)
 
