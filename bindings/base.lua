@@ -28,4 +28,6 @@ bindings.base = {
 	RIGHT = 'RAIDTARGET2',
 
 	F12 = 'm|/run ReloadUI()',
+
+	['|'] = 'EXTRAACTIONBUTTON1',
 }
