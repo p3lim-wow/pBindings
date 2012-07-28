@@ -45,8 +45,9 @@ end
 function pBindings:ACTIONBAR_UPDATE_COOLDOWN()
 	if(not oBindings1:IsShown()) then return end
 
-	for index = 1, 9 do
+	for index = 1, 6 do
 		local button = _G['oBindings' .. index]
+
 		local _, id = GetActionInfo(button.action)
 		if(id) then
 			local start, duration = GetSpellCooldown(id)
@@ -56,7 +57,7 @@ function pBindings:ACTIONBAR_UPDATE_COOLDOWN()
 end
 
 function pBindings:UPDATE_BINDINGS()
-	for index = 1, 9 do
+	for index = 1, 6 do
 		local key = GetBindingKey('CLICK oBindings' .. index .. ':LeftButton')
 		if(key) then
 			_G['oBindings' .. index].hotkey:SetText(GetBindingText(key, 'KEY_', 1))
@@ -76,7 +77,7 @@ pBindings:HookScript('OnEvent', function(self, event, name)
 	local lastValue
 	_STATE:HookScript('OnAttributeChanged', function(self, attribute, value)
 		if(attribute == 'statehidden' and value ~= lastValue) then
-			for index = 1, 9 do
+			for index = 1, 6 do
 				UpdateButton(_G['oBindings' .. index])
 			end
 
@@ -84,7 +85,7 @@ pBindings:HookScript('OnEvent', function(self, event, name)
 		end
 	end)
 
-	for index = 1, 9 do
+	for index = 1, 6 do
 		local button = _G['oBindings' .. index]
 		button:SetSize(26, 26)
 		button:SetBackdrop(BACKDROP)
