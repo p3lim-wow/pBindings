@@ -23,6 +23,8 @@ bindings.base = {
 
 	ctrl = {
 		R = 'TOGGLERAIDTAB',
+
+		BUTTON3 = 'm|/dismount\n/leavevehicle\n/cast [mod:alt] Traveler\'s Tundra Mammoth; [flyable] Pureblood Fire Hawk; Mekgineer\'s Chopper',
 	},
 
 	HOME = 'TOGGLEAUTORUN',
