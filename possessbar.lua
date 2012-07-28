@@ -56,15 +56,6 @@ function pBindings:ACTIONBAR_UPDATE_COOLDOWN()
 	end
 end
 
-function pBindings:UPDATE_BINDINGS()
-	for index = 1, 6 do
-		local key = GetBindingKey('CLICK oBindings' .. index .. ':LeftButton')
-		if(key) then
-			_G['oBindings' .. index].hotkey:SetText(GetBindingText(key, 'KEY_', 1))
-		end
-	end
-end
-
 local lastState
 pBindings:RegisterCallback(function(self, state)
 	if(state ~= lastState and state ~= 'base' and state ~= 'shift' and state ~= 'ctrl' and state ~= 'alt' and state ~= 'petbattle') then
@@ -73,6 +64,11 @@ pBindings:RegisterCallback(function(self, state)
 		for index = 1, 6 do
 			local button = _G['oBindings' .. index]
 			button.action = string.match(button:GetAttribute('ob-' .. state .. '-attribute'), 'action,(%d+)')
+
+			local key = GetBindingKey('CLICK oBindings' .. index .. ':LeftButton')
+			if(key) then
+				button.hotkey:SetText(GetBindingText(key, 'KEY_', 1))
+			end
 		end
 	end
 end)
@@ -81,7 +77,6 @@ pBindings:HookScript('OnEvent', function(self, event, name)
 	if(event ~= 'ADDON_LOADED' or name ~= globalName) then return end
 
 	self:RegisterEvent('ACTIONBAR_UPDATE_COOLDOWN')
-	self:RegisterEvent('UPDATE_BINDINGS')
 
 	local _STATE = oBindings1:GetParent()
 	RegisterStateDriver(_STATE, 'visibility', '[vehicleui][possessbar][overridebar] show; hide')
