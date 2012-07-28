@@ -9,6 +9,15 @@ bindings.base = {
 	'm|',
 	'm|',
 
+	petbattle = {
+		-- Really Blizz?
+		'm|/run PetBattleFrame_ButtonDown(1)',
+		'm|/run PetBattleFrame_ButtonDown(2)',
+		'm|/run PetBattleFrame_ButtonDown(3)',
+		'm|/run PetBattleFrame_ButtonDown(4)',
+		'm|/run PetBattleFrame_ButtonDown(5)',
+	},
+
 	W = 'MOVEFORWARD',
 	A = 'STRAFELEFT',
 	S = 'MOVEBACKWARD',
