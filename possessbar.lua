@@ -72,7 +72,7 @@ pBindings:HookScript('OnEvent', function(self, event, name)
 	self:RegisterEvent('UPDATE_BINDINGS')
 
 	local _STATE = oBindings1:GetParent()
-	RegisterStateDriver(_STATE, 'visibility', '[bonusbar:5] show; hide')
+	RegisterStateDriver(_STATE, 'visibility', '[vehicleui][possessbar][overridebar] show; hide')
 
 	local lastValue
 	_STATE:HookScript('OnAttributeChanged', function(self, attribute, value)
