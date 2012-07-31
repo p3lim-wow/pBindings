@@ -63,7 +63,7 @@ end
 
 local lastState
 pBindings:RegisterCallback(function(self, state)
-	if(state ~= lastState and state ~= 'base' and state ~= 'shift' and state ~= 'ctrl' and state ~= 'alt' and state ~= 'petbattle') then
+	if(state ~= lastState and (state == 'possess' or state == 'vehicle' or state == 'override')) then
 		lastState = state
 
 		for index = 1, 6 do
