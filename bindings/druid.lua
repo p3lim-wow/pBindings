@@ -6,8 +6,9 @@ pBindings:RegisterKeyBindings('Feral', bindings.base, {
 	's|Rejuvenation',
 	's|Healing Touch',
 	's|Mark of the Wild',
-	's|Symbiosis',
 	's|Revive',
+
+	T = 's|Typhoon',
 
 	BUTTON3 = 's|Prowl',
 
@@ -16,7 +17,7 @@ pBindings:RegisterKeyBindings('Feral', bindings.base, {
 		's|Shred',
 		's|Swipe',
 		's|Mangle',
-		's|Trash',
+		's|Thrash',
 
 		Q = 'm|/cast Tiger\'s Fury\n/cast Berserk',
 		E = 's|Tiger\'s Fury',
@@ -49,8 +50,9 @@ pBindings:RegisterKeyBindings('Feral', bindings.base, {
 		's|Mighty Bash',
 
 		Q = 's|Barkskin',
-		E = 's|Renewal',
+		E = 'm|/cast Nature\'s Swiftness\n/cast Healing Touch',
 		F = 's|Rebirth',
+		T = 's|Symbiosis',
 
 		BUTTON3 = 's|Shadowmeld',
 		BUTTON4 = 's|Faerie Fire',
