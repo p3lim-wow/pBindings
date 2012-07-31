@@ -11,3 +11,4 @@ bindings\base.lua
 bindings\druid.lua
 
 possess.lua
+extra.lua
