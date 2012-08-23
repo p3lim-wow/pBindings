@@ -46,5 +46,5 @@ bindings.base = {
 
 	F12 = 'm|/run ReloadUI()',
 
-	['|'] = 'EXTRAACTIONBUTTON1',
+	['|'] = 'm|/click ExtraActionButton1'
 }
