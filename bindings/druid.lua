@@ -51,7 +51,7 @@ pBindings:RegisterKeyBindings('Feral', bindings.base, {
 
 		Q = 'm|/cast Survival Instincts\n/cast Barkskin',
 		E = 'm|/cast Nature\'s Swiftness\n/cast Healing Touch',
-		F = 's|Rebirth',
+		F = 'm|/cast Nature\'s Swiftness\n/cast Rebirth',
 		T = 's|Symbiosis',
 
 		BUTTON3 = 's|Shadowmeld',
