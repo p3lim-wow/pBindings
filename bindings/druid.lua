@@ -10,6 +10,7 @@ pBindings:RegisterKeyBindings('Feral', bindings.base, {
 
 	T = 's|Typhoon',
 
+	BUTTON4 = 's|Fishing',
 	BUTTON3 = 's|Prowl',
 
 	cat = {
