@@ -19,7 +19,7 @@ pBindings:RegisterKeyBindings('Feral', bindings.base, {
 		's|Mangle',
 		's|Thrash',
 
-		Q = 'm|/cast Tiger\'s Fury\n/cast Berserk',
+		Q = 'm|/cast Tiger\'s Fury\n/cast Berserk\n/cast Nature\'s Vigil',
 		E = 's|Tiger\'s Fury',
 		F = 's|Savage Roar',
 
@@ -47,7 +47,7 @@ pBindings:RegisterKeyBindings('Feral', bindings.base, {
 		's|Dash',
 		's|Tranquility',
 		's|Stampeding Roar',
-		's|Mighty Bash',
+		'm|/cast Mighty Bash\n/cast Ursol\'s Vortex',
 
 		Q = 's|Barkskin',
 		E = 'm|/cast Nature\'s Swiftness\n/cast Healing Touch',
