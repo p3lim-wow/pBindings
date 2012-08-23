@@ -49,7 +49,7 @@ pBindings:RegisterKeyBindings('Feral', bindings.base, {
 		's|Stampeding Roar',
 		'm|/cast Mighty Bash\n/cast Ursol\'s Vortex',
 
-		Q = 's|Barkskin',
+		Q = 'm|/cast Survival Instincts\n/cast Barkskin',
 		E = 'm|/cast Nature\'s Swiftness\n/cast Healing Touch',
 		F = 's|Rebirth',
 		T = 's|Symbiosis',
