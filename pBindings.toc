@@ -9,6 +9,7 @@ oBindings\blizzard.lua
 
 bindings\base.lua
 bindings\druid.lua
+bindings\rogue.lua
 
 possess.lua
 extra.lua
