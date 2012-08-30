@@ -1,6 +1,6 @@
 if(select(2, UnitClass('player')) ~= 'DRUID') then return end
 
-local _, bindings = ...
+local __, bindings = ...
 
 pBindings:RegisterKeyBindings('Feral', bindings.base, {
 	's|Rejuvenation',

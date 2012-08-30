@@ -1,6 +1,6 @@
 if(select(2, UnitClass('player')) ~= 'ROGUE') then return end
 
-local _, bindings = ...
+local __, bindings = ...
 
 pBindings:RegisterKeyBindings('Combat', bindings.base, {
 	's|Revealing Strike',

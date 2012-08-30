@@ -53,7 +53,7 @@ function pBindings:ACTIONBAR_UPDATE_COOLDOWN()
 		local button = _G['oBindings' .. index]
 		if(not button.action) then return end
 
-		local _, id = GetActionInfo(button.action)
+		local __, id = GetActionInfo(button.action)
 		if(id) then
 			local start, duration = GetSpellCooldown(id)
 			button.cooldown:SetCooldown(start, duration)
