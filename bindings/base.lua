@@ -34,7 +34,7 @@ bindings.base = {
 		R = 'TOGGLERAIDTAB',
 		F = 's|Survey',
 
-		BUTTON3 = 'm|/dismount\n/leavevehicle\n/cast [mod:alt] Traveler\'s Tundra Mammoth; [flyable] Pureblood Fire Hawk; Mekgineer\'s Chopper',
+		BUTTON3 = 'm|/dismount\n/leavevehicle\n/cast [mod:alt] Traveler\'s Tundra Mammoth; [flyable] Pureblood Fire Hawk; Crimson Deathcharger',
 	},
 
 	HOME = 'TOGGLEAUTORUN',
