@@ -13,3 +13,4 @@ bindings\rogue.lua
 
 possess.lua
 extra.lua
+petbattle.lua
