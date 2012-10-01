@@ -117,7 +117,7 @@ pBindings:HookScript('OnEvent', function(self, event, name)
 		button.cooldown = cooldown
 
 		if(index == 1) then
-			button:SetPoint('BOTTOM', UIParent, -133, 100)
+			button:SetPoint('BOTTOM', UIParent, -75, 126)
 		else
 			button:SetPoint('LEFT', _G['oBindings' .. index - 1], 'RIGHT', 4, 0)
 		end
