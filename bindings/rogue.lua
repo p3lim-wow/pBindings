@@ -18,6 +18,12 @@ pBindings:RegisterKeyBindings('Combat', bindings.base, {
 	BUTTON4 = 's|Rupture',
 	BUTTON5 = 's|Eviscerate',	
 
+	stealth = {
+		's|Distract',
+		's|Ambush',
+		's|Cheap Shot',
+	},
+
 	shift = {
 		's|Smoke Bomb',
 		's|Sprint',
@@ -37,5 +43,7 @@ pBindings:RegisterKeyBindings('Combat', bindings.base, {
 
 	alt = {
 		's|Deadly Poison',
+		's|Crippling Poison',
+		's|Mind-numbing Poison',
 	},
 })
