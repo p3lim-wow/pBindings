@@ -2,7 +2,7 @@ if(select(2, UnitClass('player')) ~= 'DRUID') then return end
 
 local __, bindings = ...
 
-pBindings:RegisterKeyBindings('Feral', bindings.base, {
+local shared = {
 	's|Rejuvenation',
 	's|Healing Touch',
 	's|Mark of the Wild',
@@ -15,29 +15,21 @@ pBindings:RegisterKeyBindings('Feral', bindings.base, {
 
 	cat = {
 		's|Rake',
-		's|Shred',
-		's|Swipe',
-		's|Mangle',
-		's|Thrash',
+		[3] = 's|Swipe',
+		[4] = 's|Mangle',
+		[5] = 's|Thrash',
 
-		Q = 'm|/cast Tiger\'s Fury\n/cast Berserk\n/cast Nature\'s Vigil',
-		E = 's|Tiger\'s Fury',
-		F = 's|Savage Roar',
-
-		BUTTON3 = 's|Prowl',
 		BUTTON4 = 's|Rip',
 		BUTTON5 = 's|Ferocious Bite',
 	},
 
 	bear = {
 		's|Lacerate',
-		's|Maul',
 		's|Thrash',
 		's|Mangle',
 		's|Swipe',
 
 		Q = 's|Berserk',
-		E = 's|Might of Ursoc',
 		F = 's|Frenzied Regeneration',
 
 		BUTTON4 = 's|Growl',
@@ -50,9 +42,9 @@ pBindings:RegisterKeyBindings('Feral', bindings.base, {
 		's|Stampeding Roar',
 		'm|/cast Mighty Bash\n/cast Ursol\'s Vortex',
 
-		Q = 'm|/cast Survival Instincts\n/cast Barkskin',
-		E = 'm|/cast Nature\'s Swiftness\n/cast Healing Touch',
-		F = 'm|/cast Nature\'s Swiftness\n/cast Rebirth',
+		Q = 'm|/cast Survival Instincts\n/cast Barkskin\n/cast [form:1] Might of Ursoc',
+		E = 'm|/console autounshift 0\n/cast Nature\'s Swiftness\n/cast Healing Touch\n/console autounshift 1\n/use item:5512',
+		F = 'm|/console autounshift 0\n/cast Nature\'s Swiftness\n/cast Rebirth\n/console autounshift 1',
 		T = 's|Symbiosis',
 
 		BUTTON3 = 's|Shadowmeld',
@@ -65,5 +57,35 @@ pBindings:RegisterKeyBindings('Feral', bindings.base, {
 		's|Cat Form',
 		'm|/cast [swimming] Aquatic Form; [flyable] Swift Flight Form; Travel Form',
 		's|Travel Form',
+		's|Heart of the Wild',
+	},
+}
+
+pBindings:RegisterKeyBindings('Feral', bindings.base, shared, {
+	cat = {
+		[2] = 's|Shred',
+
+		Q = 'm|/cast Tiger\'s Fury\n/cast Berserk\n/cast Nature\'s Vigil',
+		E = 'm|/cast Tiger\'s Fury',
+		F = 's|Savage Roar',
+	},
+})
+
+pBindings:RegisterKeyBindings('Guardian', bindings.base, shared, {
+	[5] = 's|Wild Charge',
+
+	cat = {
+		[2] = 's|Mangle',
+
+		Q = 'm|/cast Berserk\n/cast Nature\'s Vigil',
+	},
+
+	bear = {
+		[5] = 's|Wild Charge',
+
+		E = 's|Incarnation',
+
+		BUTTON5 = 's|Savage Defense',
+		BUTTON3 = 's|Enrage',
 	},
 })
